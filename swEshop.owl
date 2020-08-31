@@ -1,0 +1,1949 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ang "http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#"
+     xml:base="http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ang="http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#accompaniedBy -->
+
+    <owl:ObjectProperty rdf:about="&ang;accompaniedBy">
+        <rdfs:range rdf:resource="&ang;Document"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfAccompaniedBy"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;accompaniedBy"/>
+                <owl:onClass rdf:resource="&ang;Document"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertises -->
+
+    <owl:ObjectProperty rdf:about="&ang;advertises">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Marketing"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfAdvertises"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consist -->
+
+    <owl:ObjectProperty rdf:about="&ang;consist">
+        <rdfs:range rdf:resource="&ang;Product"/>
+        <rdfs:domain rdf:resource="&ang;ProductCategory"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfConsist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#contains -->
+
+    <owl:ObjectProperty rdf:about="&ang;contains">
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&ang;Product"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfContains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#create -->
+
+    <owl:ObjectProperty rdf:about="&ang;create">
+        <rdfs:range rdf:resource="&ang;Advertising"/>
+        <rdfs:domain rdf:resource="&ang;Marketing"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfCreate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#develop -->
+
+    <owl:ObjectProperty rdf:about="&ang;develop">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Technical"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfDevelop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#developFor -->
+
+    <owl:ObjectProperty rdf:about="&ang;developFor">
+        <rdfs:domain rdf:resource="&ang;Developer"/>
+        <rdfs:range rdf:resource="&ang;Technical"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfDevelopFor"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;developFor"/>
+                <owl:onClass rdf:resource="&ang;Technical"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#employs -->
+
+    <owl:ObjectProperty rdf:about="&ang;employs">
+        <rdfs:range rdf:resource="&ang;Employee"/>
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfEmploys"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#features -->
+
+    <owl:ObjectProperty rdf:about="&ang;features">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Warehouse"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfFeatures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#has -->
+
+    <owl:ObjectProperty rdf:about="&ang;has">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Shopper"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfHas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfAccompaniedBy -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfAccompaniedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Document"/>
+        <rdfs:range rdf:resource="&ang;Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfAdvertises -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfAdvertises">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Marketing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfConsist -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfConsist">
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&ang;ProductCategory"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;inverseOfConsist"/>
+                <owl:onClass rdf:resource="&ang;ProductCategory"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfContains -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfContains">
+        <rdfs:range rdf:resource="&ang;Order"/>
+        <rdfs:domain rdf:resource="&ang;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfCreate -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfCreate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Advertising"/>
+        <rdfs:range rdf:resource="&ang;Marketing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfDevelop -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfDevelop">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Technical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfDevelopFor -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfDevelopFor">
+        <rdfs:range rdf:resource="&ang;Developer"/>
+        <rdfs:domain rdf:resource="&ang;Technical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfEmploys -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfEmploys">
+        <rdfs:domain rdf:resource="&ang;Employee"/>
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfFeatures -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfFeatures">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Warehouse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfHas -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfHas">
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Shopper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfManaged -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfManaged">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Sales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfReceive -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfReceive">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&ang;Sales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfSend -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfSend">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&ang;Shopper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfStores -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfStores">
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&ang;Warehouse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfSuppliedProduct -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfSuppliedProduct">
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Supplier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfSupply -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfSupply">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&ang;Supplier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfWorkingAt -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfWorkingAt">
+        <rdfs:range rdf:resource="&ang;Administrator"/>
+        <rdfs:domain rdf:resource="&ang;Sales"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;inverseOfWorkingAt"/>
+                <owl:onClass rdf:resource="&ang;Administrator"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#inverseOfWorkingFor -->
+
+    <owl:ObjectProperty rdf:about="&ang;inverseOfWorkingFor">
+        <rdfs:range rdf:resource="&ang;Advertiser"/>
+        <rdfs:domain rdf:resource="&ang;Marketing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#managed -->
+
+    <owl:ObjectProperty rdf:about="&ang;managed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&ang;Eshop"/>
+        <rdfs:domain rdf:resource="&ang;Sales"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfManaged"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#receive -->
+
+    <owl:ObjectProperty rdf:about="&ang;receive">
+        <rdfs:range rdf:resource="&ang;Order"/>
+        <rdfs:domain rdf:resource="&ang;Sales"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfReceive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#send -->
+
+    <owl:ObjectProperty rdf:about="&ang;send">
+        <rdfs:range rdf:resource="&ang;Order"/>
+        <rdfs:domain rdf:resource="&ang;Shopper"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfSend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#stores -->
+
+    <owl:ObjectProperty rdf:about="&ang;stores">
+        <rdfs:range rdf:resource="&ang;Product"/>
+        <rdfs:domain rdf:resource="&ang;Warehouse"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfStores"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#suppliedProduct -->
+
+    <owl:ObjectProperty rdf:about="&ang;suppliedProduct">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&ang;Supplier"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfSuppliedProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#supply -->
+
+    <owl:ObjectProperty rdf:about="&ang;supply">
+        <rdfs:range rdf:resource="&ang;Product"/>
+        <rdfs:domain rdf:resource="&ang;Supplier"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfSupply"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#workingAt -->
+
+    <owl:ObjectProperty rdf:about="&ang;workingAt">
+        <rdfs:domain rdf:resource="&ang;Administrator"/>
+        <rdfs:range rdf:resource="&ang;Sales"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfWorkingAt"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;workingAt"/>
+                <owl:onClass rdf:resource="&ang;Sales"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#workingFor -->
+
+    <owl:ObjectProperty rdf:about="&ang;workingFor">
+        <rdfs:domain rdf:resource="&ang;Advertiser"/>
+        <rdfs:range rdf:resource="&ang;Marketing"/>
+        <owl:inverseOf rdf:resource="&ang;inverseOfWorkingFor"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ang;workingFor"/>
+                <owl:onClass rdf:resource="&ang;Marketing"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertisingCost -->
+
+    <owl:DatatypeProperty rdf:about="&ang;advertisingCost">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Advertising"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertisingEndDate -->
+
+    <owl:DatatypeProperty rdf:about="&ang;advertisingEndDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Advertising"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertisingStartDate -->
+
+    <owl:DatatypeProperty rdf:about="&ang;advertisingStartDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Advertising"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertisingType -->
+
+    <owl:DatatypeProperty rdf:about="&ang;advertisingType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Advertising"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>online</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>printed</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#categoryName -->
+
+    <owl:DatatypeProperty rdf:about="&ang;categoryName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;ProductCategory"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consNoteAddress -->
+
+    <owl:DatatypeProperty rdf:about="&ang;consNoteAddress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;ConsignmentNote"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consNoteNumber -->
+
+    <owl:DatatypeProperty rdf:about="&ang;consNoteNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;ConsignmentNote"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#departmentEmail -->
+
+    <owl:DatatypeProperty rdf:about="&ang;departmentEmail">
+        <rdfs:domain rdf:resource="&ang;Department"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#departmentPhone -->
+
+    <owl:DatatypeProperty rdf:about="&ang;departmentPhone">
+        <rdfs:domain rdf:resource="&ang;Department"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#documentDate -->
+
+    <owl:DatatypeProperty rdf:about="&ang;documentDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Document"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#employeeAmka -->
+
+    <owl:DatatypeProperty rdf:about="&ang;employeeAmka">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Employee"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#employeeSalary -->
+
+    <owl:DatatypeProperty rdf:about="&ang;employeeSalary">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Employee"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#eshopAddress -->
+
+    <owl:DatatypeProperty rdf:about="&ang;eshopAddress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#eshopDomainName -->
+
+    <owl:DatatypeProperty rdf:about="&ang;eshopDomainName">
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#eshopName -->
+
+    <owl:DatatypeProperty rdf:about="&ang;eshopName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Eshop"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#invoiceAfm -->
+
+    <owl:DatatypeProperty rdf:about="&ang;invoiceAfm">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Invoice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#invoiceNumber -->
+
+    <owl:DatatypeProperty rdf:about="&ang;invoiceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Invoice"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#orderDate -->
+
+    <owl:DatatypeProperty rdf:about="&ang;orderDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#orderNumber -->
+
+    <owl:DatatypeProperty rdf:about="&ang;orderNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#orderProductsCost -->
+
+    <owl:DatatypeProperty rdf:about="&ang;orderProductsCost">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#orderShipmentCost -->
+
+    <owl:DatatypeProperty rdf:about="&ang;orderShipmentCost">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#orderStatus -->
+
+    <owl:DatatypeProperty rdf:about="&ang;orderStatus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Order"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>cancelled</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>shipped</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personAddress -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personAddress">
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personCity -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personCity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personCountry -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personCountry">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personEmail -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personEmail">
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personName -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personPhone -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personPhone">
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#personSurname -->
+
+    <owl:DatatypeProperty rdf:about="&ang;personSurname">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#productName -->
+
+    <owl:DatatypeProperty rdf:about="&ang;productName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#productPrice -->
+
+    <owl:DatatypeProperty rdf:about="&ang;productPrice">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#productSku -->
+
+    <owl:DatatypeProperty rdf:about="&ang;productSku">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#receiptNumber -->
+
+    <owl:DatatypeProperty rdf:about="&ang;receiptNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Receipt"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#shopperSignUpDate -->
+
+    <owl:DatatypeProperty rdf:about="&ang;shopperSignUpDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Shopper"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#shopperUsername -->
+
+    <owl:DatatypeProperty rdf:about="&ang;shopperUsername">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Shopper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouseAddress -->
+
+    <owl:DatatypeProperty rdf:about="&ang;warehouseAddress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Warehouse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouseCity -->
+
+    <owl:DatatypeProperty rdf:about="&ang;warehouseCity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Warehouse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouseCountry -->
+
+    <owl:DatatypeProperty rdf:about="&ang;warehouseCountry">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&ang;Warehouse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Administrator -->
+
+    <owl:Class rdf:about="&ang;Administrator">
+        <rdfs:subClassOf rdf:resource="&ang;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Advertiser -->
+
+    <owl:Class rdf:about="&ang;Advertiser">
+        <rdfs:subClassOf rdf:resource="&ang;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Advertising -->
+
+    <owl:Class rdf:about="&ang;Advertising"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#ConsignmentNote -->
+
+    <owl:Class rdf:about="&ang;ConsignmentNote">
+        <rdfs:subClassOf rdf:resource="&ang;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Department -->
+
+    <owl:Class rdf:about="&ang;Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Developer -->
+
+    <owl:Class rdf:about="&ang;Developer">
+        <rdfs:subClassOf rdf:resource="&ang;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Document -->
+
+    <owl:Class rdf:about="&ang;Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Employee -->
+
+    <owl:Class rdf:about="&ang;Employee">
+        <rdfs:subClassOf rdf:resource="&ang;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Eshop -->
+
+    <owl:Class rdf:about="&ang;Eshop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Invoice -->
+
+    <owl:Class rdf:about="&ang;Invoice">
+        <rdfs:subClassOf rdf:resource="&ang;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Marketing -->
+
+    <owl:Class rdf:about="&ang;Marketing">
+        <rdfs:subClassOf rdf:resource="&ang;Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Order -->
+
+    <owl:Class rdf:about="&ang;Order"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Person -->
+
+    <owl:Class rdf:about="&ang;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Product -->
+
+    <owl:Class rdf:about="&ang;Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#ProductCategory -->
+
+    <owl:Class rdf:about="&ang;ProductCategory"/>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Receipt -->
+
+    <owl:Class rdf:about="&ang;Receipt">
+        <rdfs:subClassOf rdf:resource="&ang;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Sales -->
+
+    <owl:Class rdf:about="&ang;Sales">
+        <rdfs:subClassOf rdf:resource="&ang;Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Shopper -->
+
+    <owl:Class rdf:about="&ang;Shopper">
+        <rdfs:subClassOf rdf:resource="&ang;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Supplier -->
+
+    <owl:Class rdf:about="&ang;Supplier">
+        <rdfs:subClassOf rdf:resource="&ang;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Technical -->
+
+    <owl:Class rdf:about="&ang;Technical">
+        <rdfs:subClassOf rdf:resource="&ang;Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#Warehouse -->
+
+    <owl:Class rdf:about="&ang;Warehouse"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#admin1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;admin1">
+        <rdf:type rdf:resource="&ang;Administrator"/>
+        <employeeSalary rdf:datatype="&xsd;decimal">1000</employeeSalary>
+        <employeeAmka rdf:datatype="&xsd;string">523698452</employeeAmka>
+        <personPhone rdf:datatype="&xsd;string">6975125487</personPhone>
+        <personCity rdf:datatype="&xsd;string">Athens</personCity>
+        <personName rdf:datatype="&xsd;string">Chris</personName>
+        <personCountry rdf:datatype="&xsd;string">Greece</personCountry>
+        <personAddress rdf:datatype="&xsd;string">Mpotsari 45</personAddress>
+        <personSurname rdf:datatype="&xsd;string">Taylor</personSurname>
+        <personEmail rdf:datatype="&xsd;string">chris@gmail.com</personEmail>
+        <personEmail rdf:datatype="&xsd;string">taylor@gmail.com</personEmail>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <workingAt rdf:resource="&ang;sales1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#admin2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;admin2">
+        <rdf:type rdf:resource="&ang;Administrator"/>
+        <employeeSalary rdf:datatype="&xsd;integer">1200</employeeSalary>
+        <personName>John</personName>
+        <personAddress>Maurokordatou 35</personAddress>
+        <personPhone>6975154856</personPhone>
+        <personEmail>mackan@gmail.com</personEmail>
+        <employeeAmka>584562157</employeeAmka>
+        <personEmail>john@gmail.com</personEmail>
+        <personSurname>MacKan</personSurname>
+        <personCountry>Greece</personCountry>
+        <personCity>Thessaloniki</personCity>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <workingAt rdf:resource="&ang;sales1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#admin3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;admin3">
+        <rdf:type rdf:resource="&ang;Administrator"/>
+        <employeeSalary rdf:datatype="&xsd;integer">800</employeeSalary>
+        <personCity>Thessaloniki</personCity>
+        <personAddress>Perikleous 52</personAddress>
+        <personSurname>Harris</personSurname>
+        <personCountry>Greece</personCountry>
+        <employeeAmka>568545214</employeeAmka>
+        <personName>Roger</personName>
+        <personEmail>roger@gmail.com</personEmail>
+        <personPhone>6548795234</personPhone>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <workingAt rdf:resource="&ang;sales2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#admin4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;admin4">
+        <rdf:type rdf:resource="&ang;Administrator"/>
+        <employeeSalary rdf:datatype="&xsd;integer">750</employeeSalary>
+        <personPhone>6985125478</personPhone>
+        <personName>Bob</personName>
+        <employeeAmka>598756215</employeeAmka>
+        <personSurname>Smith</personSurname>
+        <personCountry>Greece</personCountry>
+        <personEmail>bob@gmail.com</personEmail>
+        <personCity>Thessaloniki</personCity>
+        <personAddress>Sindika 32</personAddress>
+        <personPhone>6984521574</personPhone>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <workingAt rdf:resource="&ang;sales2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertiser1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertiser1">
+        <rdf:type rdf:resource="&ang;Advertiser"/>
+        <employeeSalary rdf:datatype="&xsd;integer">1000</employeeSalary>
+        <employeeAmka>458625687</employeeAmka>
+        <personPhone>6584212594</personPhone>
+        <personCity>Thessaloniki</personCity>
+        <personName>Jeny</personName>
+        <personCountry>Greece</personCountry>
+        <personAddress>Papadiamnti 22</personAddress>
+        <personEmail>jeny@gmail.com</personEmail>
+        <personSurname>Smith</personSurname>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <workingFor rdf:resource="&ang;marketing1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertiser2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertiser2">
+        <rdf:type rdf:resource="&ang;Advertiser"/>
+        <employeeSalary rdf:datatype="&xsd;integer">1100</employeeSalary>
+        <personPhone>6512598751</personPhone>
+        <personCountry>Greece</personCountry>
+        <employeeAmka>861254879</employeeAmka>
+        <personName>Rita</personName>
+        <personAddress>Seferi 31</personAddress>
+        <personSurname>Gorman</personSurname>
+        <personCity>Thessaloniki</personCity>
+        <personPhone>6254987521</personPhone>
+        <personEmail>rita@gmail.com</personEmail>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <workingFor rdf:resource="&ang;marketing1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertiser3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertiser3">
+        <rdf:type rdf:resource="&ang;Advertiser"/>
+        <employeeSalary rdf:datatype="&xsd;integer">950</employeeSalary>
+        <personName>Steve</personName>
+        <employeeAmka>569856214</employeeAmka>
+        <personEmail>steve@gmail.com</personEmail>
+        <personAddress>V. Olgas 142</personAddress>
+        <personCountry>Greece</personCountry>
+        <personEmail>clayton@gmail.com</personEmail>
+        <personCity>Athens</personCity>
+        <personSurname>Clayton</personSurname>
+        <personPhone>6875154861</personPhone>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <workingFor rdf:resource="&ang;marketing2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertiser4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertiser4">
+        <rdf:type rdf:resource="&ang;Advertiser"/>
+        <employeeSalary rdf:datatype="&xsd;integer">700</employeeSalary>
+        <personName>Jason</personName>
+        <personSurname>Brown</personSurname>
+        <personPhone>6984935124</personPhone>
+        <personCountry>Greece</personCountry>
+        <employeeAmka>756981254</employeeAmka>
+        <personPhone>6982648752</personPhone>
+        <personAddress>Tsimiski 32</personAddress>
+        <personCity>Athens</personCity>
+        <personEmail>jason@gmail.com</personEmail>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <workingFor rdf:resource="&ang;marketing2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertising1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertising1">
+        <rdf:type rdf:resource="&ang;Advertising"/>
+        <advertisingCost rdf:datatype="&xsd;integer">100</advertisingCost>
+        <advertisingType>printed</advertisingType>
+        <inverseOfCreate rdf:resource="&ang;marketing1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertising2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertising2">
+        <rdf:type rdf:resource="&ang;Advertising"/>
+        <advertisingCost rdf:datatype="&xsd;integer">120</advertisingCost>
+        <advertisingType>printed</advertisingType>
+        <inverseOfCreate rdf:resource="&ang;marketing1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertising3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertising3">
+        <rdf:type rdf:resource="&ang;Advertising"/>
+        <advertisingCost rdf:datatype="&xsd;integer">130</advertisingCost>
+        <advertisingType>online</advertisingType>
+        <inverseOfCreate rdf:resource="&ang;marketing2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#advertising4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;advertising4">
+        <rdf:type rdf:resource="&ang;Advertising"/>
+        <advertisingCost rdf:datatype="&xsd;integer">200</advertisingCost>
+        <advertisingType>online</advertisingType>
+        <inverseOfCreate rdf:resource="&ang;marketing2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consNote1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;consNote1">
+        <rdf:type rdf:resource="&ang;ConsignmentNote"/>
+        <consNoteNumber rdf:datatype="&xsd;integer">0001</consNoteNumber>
+        <consNoteAddress>Gravias 65</consNoteAddress>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consNote2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;consNote2">
+        <rdf:type rdf:resource="&ang;ConsignmentNote"/>
+        <consNoteNumber rdf:datatype="&xsd;integer">0002</consNoteNumber>
+        <consNoteAddress>Gravias 65</consNoteAddress>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#consNote3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;consNote3">
+        <rdf:type rdf:resource="&ang;ConsignmentNote"/>
+        <consNoteNumber rdf:datatype="&xsd;integer">0003</consNoteNumber>
+        <consNoteAddress>Sarantaporou 78</consNoteAddress>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#developer1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;developer1">
+        <rdf:type rdf:resource="&ang;Developer"/>
+        <employeeSalary rdf:datatype="&xsd;integer">1000</employeeSalary>
+        <personName>Peter</personName>
+        <employeeAmka>759652547</employeeAmka>
+        <personEmail>anderson@gmail.com</personEmail>
+        <personCountry>Greece</personCountry>
+        <personCity>Athens</personCity>
+        <personEmail>peter@gmail.com</personEmail>
+        <personSurname>Anderson</personSurname>
+        <personAddress>Thiseos 54</personAddress>
+        <personPhone>6265489751</personPhone>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <developFor rdf:resource="&ang;technical1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#developer2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;developer2">
+        <rdf:type rdf:resource="&ang;Developer"/>
+        <employeeSalary rdf:datatype="&xsd;integer">850</employeeSalary>
+        <employeeAmka>758452658</employeeAmka>
+        <personCountry>Greece</personCountry>
+        <personAddress>Labraki 31</personAddress>
+        <personEmail>elena@gmail.com</personEmail>
+        <personCity>Thessaloniki</personCity>
+        <personPhone>6987515475</personPhone>
+        <personSurname>Murhpy</personSurname>
+        <personName>Elena</personName>
+        <inverseOfEmploys rdf:resource="&ang;eshop1"/>
+        <developFor rdf:resource="&ang;technical1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#developer3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;developer3">
+        <rdf:type rdf:resource="&ang;Developer"/>
+        <employeeSalary rdf:datatype="&xsd;integer">1300</employeeSalary>
+        <personAddress>Egnatias 132</personAddress>
+        <personCity>Thessaloniki</personCity>
+        <personSurname>Harris</personSurname>
+        <employeeAmka>458962125</employeeAmka>
+        <personName>Larson</personName>
+        <personPhone>6987561248</personPhone>
+        <personEmail>harris@gmail.com</personEmail>
+        <personPhone>6259875125</personPhone>
+        <personCountry>Greece</personCountry>
+        <personEmail>larson@gmail.com</personEmail>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <developFor rdf:resource="&ang;technical2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#developer4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;developer4">
+        <rdf:type rdf:resource="&ang;Developer"/>
+        <employeeSalary rdf:datatype="&xsd;integer">900</employeeSalary>
+        <personPhone>6954587562</personPhone>
+        <personPhone>6987512547</personPhone>
+        <personCity>Thessaloniki</personCity>
+        <personAddress>Kritis 42</personAddress>
+        <personEmail>angel@gmail.com</personEmail>
+        <employeeAmka>458563254</employeeAmka>
+        <personName>Angel</personName>
+        <personSurname>Burns</personSurname>
+        <personCountry>Greece</personCountry>
+        <inverseOfEmploys rdf:resource="&ang;eshop2"/>
+        <developFor rdf:resource="&ang;technical2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#eshop1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;eshop1">
+        <rdf:type rdf:resource="&ang;Eshop"/>
+        <eshopDomainName>www.techshop.gr</eshopDomainName>
+        <eshopDomainName>www.e-tech.com</eshopDomainName>
+        <eshopAddress>Tsimiski 34</eshopAddress>
+        <eshopName>TechShop</eshopName>
+        <employs rdf:resource="&ang;admin1"/>
+        <employs rdf:resource="&ang;admin2"/>
+        <employs rdf:resource="&ang;advertiser1"/>
+        <employs rdf:resource="&ang;advertiser2"/>
+        <employs rdf:resource="&ang;developer1"/>
+        <employs rdf:resource="&ang;developer2"/>
+        <inverseOfAdvertises rdf:resource="&ang;marketing1"/>
+        <inverseOfManaged rdf:resource="&ang;sales1"/>
+        <has rdf:resource="&ang;shopper1"/>
+        <has rdf:resource="&ang;shopper2"/>
+        <suppliedProduct rdf:resource="&ang;supplier1"/>
+        <inverseOfDevelop rdf:resource="&ang;technical1"/>
+        <features rdf:resource="&ang;warehouse1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#eshop2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;eshop2">
+        <rdf:type rdf:resource="&ang;Eshop"/>
+        <eshopDomainName>www.public.gr</eshopDomainName>
+        <eshopAddress>Svolou 25</eshopAddress>
+        <eshopName>Public</eshopName>
+        <employs rdf:resource="&ang;admin3"/>
+        <employs rdf:resource="&ang;admin4"/>
+        <employs rdf:resource="&ang;advertiser3"/>
+        <employs rdf:resource="&ang;advertiser4"/>
+        <employs rdf:resource="&ang;developer3"/>
+        <employs rdf:resource="&ang;developer4"/>
+        <inverseOfAdvertises rdf:resource="&ang;marketing2"/>
+        <inverseOfManaged rdf:resource="&ang;sales2"/>
+        <has rdf:resource="&ang;shopper1"/>
+        <has rdf:resource="&ang;shopper3"/>
+        <suppliedProduct rdf:resource="&ang;supplier2"/>
+        <inverseOfDevelop rdf:resource="&ang;technical2"/>
+        <features rdf:resource="&ang;warehouse2"/>
+        <features rdf:resource="&ang;warehouse3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#invoice1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;invoice1">
+        <rdf:type rdf:resource="&ang;Invoice"/>
+        <invoiceNumber rdf:datatype="&xsd;integer">001</invoiceNumber>
+        <invoiceAfm>256874512</invoiceAfm>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#invoice2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;invoice2">
+        <rdf:type rdf:resource="&ang;Invoice"/>
+        <invoiceNumber rdf:datatype="&xsd;integer">002</invoiceNumber>
+        <invoiceAfm>584521257</invoiceAfm>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#marketing1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;marketing1">
+        <rdf:type rdf:resource="&ang;Marketing"/>
+        <departmentPhone>2310861254</departmentPhone>
+        <departmentEmail>market0@gmail.com</departmentEmail>
+        <departmentEmail>market1@gmail.com</departmentEmail>
+        <inverseOfWorkingFor rdf:resource="&ang;advertiser1"/>
+        <inverseOfWorkingFor rdf:resource="&ang;advertiser2"/>
+        <create rdf:resource="&ang;advertising1"/>
+        <create rdf:resource="&ang;advertising2"/>
+        <advertises rdf:resource="&ang;eshop1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#marketing2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;marketing2">
+        <rdf:type rdf:resource="&ang;Marketing"/>
+        <departmentEmail>market2@gmail.com</departmentEmail>
+        <departmentPhone>2108625487</departmentPhone>
+        <departmentPhone>2102568452</departmentPhone>
+        <inverseOfWorkingFor rdf:resource="&ang;advertiser3"/>
+        <inverseOfWorkingFor rdf:resource="&ang;advertiser4"/>
+        <create rdf:resource="&ang;advertising3"/>
+        <create rdf:resource="&ang;advertising4"/>
+        <advertises rdf:resource="&ang;eshop2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#order1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;order1">
+        <rdf:type rdf:resource="&ang;Order"/>
+        <orderNumber rdf:datatype="&xsd;integer">001</orderNumber>
+        <orderShipmentCost rdf:datatype="&xsd;integer">10</orderShipmentCost>
+        <orderProductsCost rdf:datatype="&xsd;integer">1420</orderProductsCost>
+        <orderStatus>cancelled</orderStatus>
+        <contains rdf:resource="&ang;product1"/>
+        <contains rdf:resource="&ang;product3"/>
+        <inverseOfReceive rdf:resource="&ang;sales1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#order2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;order2">
+        <rdf:type rdf:resource="&ang;Order"/>
+        <orderNumber rdf:datatype="&xsd;integer">002</orderNumber>
+        <orderProductsCost rdf:datatype="&xsd;integer">1280</orderProductsCost>
+        <orderShipmentCost rdf:datatype="&xsd;integer">20</orderShipmentCost>
+        <orderStatus>shipped</orderStatus>
+        <accompaniedBy rdf:resource="&ang;consNote1"/>
+        <accompaniedBy rdf:resource="&ang;invoice1"/>
+        <contains rdf:resource="&ang;product2"/>
+        <contains rdf:resource="&ang;product8"/>
+        <inverseOfReceive rdf:resource="&ang;sales2"/>
+        <inverseOfSend rdf:resource="&ang;shopper3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#order3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;order3">
+        <rdf:type rdf:resource="&ang;Order"/>
+        <orderNumber rdf:datatype="&xsd;integer">003</orderNumber>
+        <orderProductsCost rdf:datatype="&xsd;integer">1000</orderProductsCost>
+        <orderShipmentCost rdf:datatype="&xsd;integer">12</orderShipmentCost>
+        <orderStatus>shipped</orderStatus>
+        <accompaniedBy rdf:resource="&ang;consNote2"/>
+        <contains rdf:resource="&ang;product5"/>
+        <contains rdf:resource="&ang;product7"/>
+        <accompaniedBy rdf:resource="&ang;receipt1"/>
+        <inverseOfReceive rdf:resource="&ang;sales2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#order4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;order4">
+        <rdf:type rdf:resource="&ang;Order"/>
+        <orderNumber rdf:datatype="&xsd;integer">004</orderNumber>
+        <orderShipmentCost rdf:datatype="&xsd;integer">15</orderShipmentCost>
+        <orderProductsCost rdf:datatype="&xsd;integer">900</orderProductsCost>
+        <orderStatus>cancelled</orderStatus>
+        <contains rdf:resource="&ang;product9"/>
+        <inverseOfReceive rdf:resource="&ang;sales1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#order5 -->
+
+    <owl:NamedIndividual rdf:about="&ang;order5">
+        <rdf:type rdf:resource="&ang;Order"/>
+        <orderNumber rdf:datatype="&xsd;integer">005</orderNumber>
+        <orderShipmentCost rdf:datatype="&xsd;integer">20</orderShipmentCost>
+        <orderProductsCost rdf:datatype="&xsd;integer">640</orderProductsCost>
+        <orderStatus>shipped</orderStatus>
+        <accompaniedBy rdf:resource="&ang;consNote3"/>
+        <accompaniedBy rdf:resource="&ang;invoice2"/>
+        <contains rdf:resource="&ang;product2"/>
+        <contains rdf:resource="&ang;product5"/>
+        <inverseOfReceive rdf:resource="&ang;sales2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#prCategory1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;prCategory1">
+        <rdf:type rdf:resource="&ang;ProductCategory"/>
+        <categoryName>mobiles</categoryName>
+        <consist rdf:resource="&ang;product1"/>
+        <consist rdf:resource="&ang;product2"/>
+        <consist rdf:resource="&ang;product3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#prCategory2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;prCategory2">
+        <rdf:type rdf:resource="&ang;ProductCategory"/>
+        <categoryName>tablets</categoryName>
+        <consist rdf:resource="&ang;product4"/>
+        <consist rdf:resource="&ang;product5"/>
+        <consist rdf:resource="&ang;product6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#prCategory3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;prCategory3">
+        <rdf:type rdf:resource="&ang;ProductCategory"/>
+        <categoryName>televisions</categoryName>
+        <consist rdf:resource="&ang;product10"/>
+        <consist rdf:resource="&ang;product7"/>
+        <consist rdf:resource="&ang;product8"/>
+        <consist rdf:resource="&ang;product9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product1">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">700</productPrice>
+        <productName>samsungS5</productName>
+        <productSku>mob100</productSku>
+        <inverseOfContains rdf:resource="&ang;order1"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory1"/>
+        <inverseOfSupply rdf:resource="&ang;supplier1"/>
+        <inverseOfStores rdf:resource="&ang;warehouse1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product10 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product10">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">650</productPrice>
+        <productName>lg smart tv zq-420</productName>
+        <productSku>tv103</productSku>
+        <inverseOfConsist rdf:resource="&ang;prCategory3"/>
+        <inverseOfSupply rdf:resource="&ang;supplier1"/>
+        <inverseOfStores rdf:resource="&ang;warehouse1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product2">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">420</productPrice>
+        <productSku>mob102</productSku>
+        <productName>samsungS4</productName>
+        <inverseOfContains rdf:resource="&ang;order2"/>
+        <inverseOfContains rdf:resource="&ang;order5"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory1"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product3">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">720</productPrice>
+        <productName>iphone7</productName>
+        <productSku>mob101</productSku>
+        <inverseOfContains rdf:resource="&ang;order1"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory1"/>
+        <inverseOfSupply rdf:resource="&ang;supplier1"/>
+        <inverseOfStores rdf:resource="&ang;warehouse1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product4 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product4">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">240</productPrice>
+        <productSku>tab101</productSku>
+        <productName>samsungT1</productName>
+        <inverseOfConsist rdf:resource="&ang;prCategory2"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product5 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product5">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">220</productPrice>
+        <productName>lenovoT2</productName>
+        <productSku>tab102</productSku>
+        <inverseOfContains rdf:resource="&ang;order3"/>
+        <inverseOfContains rdf:resource="&ang;order5"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory2"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product6 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product6">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">180</productPrice>
+        <productSku>tab100</productSku>
+        <productName>lenovoT3</productName>
+        <inverseOfConsist rdf:resource="&ang;prCategory2"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product7 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product7">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">780</productPrice>
+        <productName>sony smart tv xz-230</productName>
+        <productSku>tv102</productSku>
+        <inverseOfContains rdf:resource="&ang;order3"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory3"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product8 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product8">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">860</productPrice>
+        <productSku>tv100</productSku>
+        <productName>phillips smart tv zw-300</productName>
+        <inverseOfContains rdf:resource="&ang;order2"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory3"/>
+        <inverseOfSupply rdf:resource="&ang;supplier2"/>
+        <inverseOfStores rdf:resource="&ang;warehouse2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#product9 -->
+
+    <owl:NamedIndividual rdf:about="&ang;product9">
+        <rdf:type rdf:resource="&ang;Product"/>
+        <productPrice rdf:datatype="&xsd;integer">900</productPrice>
+        <productName>samsung smart tv uv-900</productName>
+        <productSku>tv101</productSku>
+        <inverseOfContains rdf:resource="&ang;order4"/>
+        <inverseOfConsist rdf:resource="&ang;prCategory3"/>
+        <inverseOfSupply rdf:resource="&ang;supplier1"/>
+        <inverseOfStores rdf:resource="&ang;warehouse1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#receipt1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;receipt1">
+        <rdf:type rdf:resource="&ang;Receipt"/>
+        <receiptNumber rdf:datatype="&xsd;integer">01</receiptNumber>
+        <inverseOfAccompaniedBy rdf:resource="&ang;order3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#sales1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;sales1">
+        <rdf:type rdf:resource="&ang;Sales"/>
+        <departmentPhone>2102365874</departmentPhone>
+        <departmentEmail>sales01@gmail.com.sales00@gmail.com</departmentEmail>
+        <departmentPhone>2103658942</departmentPhone>
+        <inverseOfWorkingAt rdf:resource="&ang;admin1"/>
+        <inverseOfWorkingAt rdf:resource="&ang;admin2"/>
+        <managed rdf:resource="&ang;eshop1"/>
+        <receive rdf:resource="&ang;order1"/>
+        <receive rdf:resource="&ang;order4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#sales2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;sales2">
+        <rdf:type rdf:resource="&ang;Sales"/>
+        <departmentEmail>sales02@gmail.com</departmentEmail>
+        <departmentPhone>2310236587</departmentPhone>
+        <inverseOfWorkingAt rdf:resource="&ang;admin3"/>
+        <inverseOfWorkingAt rdf:resource="&ang;admin4"/>
+        <managed rdf:resource="&ang;eshop2"/>
+        <receive rdf:resource="&ang;order2"/>
+        <receive rdf:resource="&ang;order3"/>
+        <receive rdf:resource="&ang;order5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#shopper1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;shopper1">
+        <rdf:type rdf:resource="&ang;Shopper"/>
+        <personSurname rdf:datatype="&xsd;string">Hammond</personSurname>
+        <personName rdf:datatype="&xsd;string">Jack</personName>
+        <personEmail>jack@gmail.com</personEmail>
+        <shopperUsername>jack7</shopperUsername>
+        <personPhone>6985421358</personPhone>
+        <personPhone>6984521569</personPhone>
+        <personCountry>Greece</personCountry>
+        <personAddress>Sarantaporou 78</personAddress>
+        <personCity>Drama</personCity>
+        <inverseOfHas rdf:resource="&ang;eshop1"/>
+        <inverseOfHas rdf:resource="&ang;eshop2"/>
+        <send rdf:resource="&ang;order3"/>
+        <send rdf:resource="&ang;order4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#shopper2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;shopper2">
+        <rdf:type rdf:resource="&ang;Shopper"/>
+        <personSurname rdf:datatype="&xsd;string">Jones</personSurname>
+        <personName rdf:datatype="&xsd;string">Rober</personName>
+        <personCountry>Greece</personCountry>
+        <personCity>Volos</personCity>
+        <personEmail>rober@gmail.com</personEmail>
+        <personEmail>jones@gmail.com</personEmail>
+        <personAddress>Ipsilantou 23</personAddress>
+        <personPhone>6975125489</personPhone>
+        <shopperUsername>rober83</shopperUsername>
+        <inverseOfHas rdf:resource="&ang;eshop1"/>
+        <send rdf:resource="&ang;order1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#shopper3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;shopper3">
+        <rdf:type rdf:resource="&ang;Shopper"/>
+        <personSurname rdf:datatype="&xsd;string">Costello</personSurname>
+        <personName rdf:datatype="&xsd;string">Stacy</personName>
+        <personCountry>Greece</personCountry>
+        <personCity>Xanthi</personCity>
+        <personPhone>6975845261</personPhone>
+        <shopperUsername>stacy62</shopperUsername>
+        <personAddress>Gravias 65</personAddress>
+        <personEmail>stacy@gmail.com</personEmail>
+        <inverseOfHas rdf:resource="&ang;eshop2"/>
+        <send rdf:resource="&ang;order2"/>
+        <send rdf:resource="&ang;order5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#supplier1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;supplier1">
+        <rdf:type rdf:resource="&ang;Supplier"/>
+        <personEmail>jason@gmail.com</personEmail>
+        <personPhone>6985423658</personPhone>
+        <personCity>Athens</personCity>
+        <personName>Jason</personName>
+        <personAddress>Kleanthous 34</personAddress>
+        <personCountry>Greece</personCountry>
+        <personSurname>McCracken</personSurname>
+        <inverseOfSuppliedProduct rdf:resource="&ang;eshop1"/>
+        <supply rdf:resource="&ang;product1"/>
+        <supply rdf:resource="&ang;product10"/>
+        <supply rdf:resource="&ang;product3"/>
+        <supply rdf:resource="&ang;product9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#supplier2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;supplier2">
+        <rdf:type rdf:resource="&ang;Supplier"/>
+        <personCity>Thessaloniki</personCity>
+        <personEmail>shelton@gmail.com</personEmail>
+        <personPhone>6598751254</personPhone>
+        <personCountry>Greece</personCountry>
+        <personSurname>Shelton</personSurname>
+        <personAddress>Mitropoleos 23</personAddress>
+        <personEmail>john@gmail.com</personEmail>
+        <personName>John</personName>
+        <inverseOfSuppliedProduct rdf:resource="&ang;eshop2"/>
+        <supply rdf:resource="&ang;product2"/>
+        <supply rdf:resource="&ang;product4"/>
+        <supply rdf:resource="&ang;product5"/>
+        <supply rdf:resource="&ang;product6"/>
+        <supply rdf:resource="&ang;product7"/>
+        <supply rdf:resource="&ang;product8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#technical1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;technical1">
+        <rdf:type rdf:resource="&ang;Technical"/>
+        <departmentEmail>technical001@gmail.com</departmentEmail>
+        <departmentPhone>2103598751</departmentPhone>
+        <inverseOfDevelopFor rdf:resource="&ang;developer1"/>
+        <inverseOfDevelopFor rdf:resource="&ang;developer2"/>
+        <develop rdf:resource="&ang;eshop1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#technical2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;technical2">
+        <rdf:type rdf:resource="&ang;Technical"/>
+        <departmentPhone>2310265875</departmentPhone>
+        <departmentEmail>technical002@gmail.com</departmentEmail>
+        <departmentPhone>2325687514</departmentPhone>
+        <inverseOfDevelopFor rdf:resource="&ang;developer3"/>
+        <inverseOfDevelopFor rdf:resource="&ang;developer4"/>
+        <develop rdf:resource="&ang;eshop2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouse1 -->
+
+    <owl:NamedIndividual rdf:about="&ang;warehouse1">
+        <rdf:type rdf:resource="&ang;Warehouse"/>
+        <warehouseCity>Thessloniki</warehouseCity>
+        <warehouseCountry>Greeece</warehouseCountry>
+        <warehouseAddress>Svolou 56</warehouseAddress>
+        <inverseOfFeatures rdf:resource="&ang;eshop1"/>
+        <stores rdf:resource="&ang;product1"/>
+        <stores rdf:resource="&ang;product10"/>
+        <stores rdf:resource="&ang;product3"/>
+        <stores rdf:resource="&ang;product9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouse2 -->
+
+    <owl:NamedIndividual rdf:about="&ang;warehouse2">
+        <rdf:type rdf:resource="&ang;Warehouse"/>
+        <warehouseCountry>Greece</warehouseCountry>
+        <warehouseAddress>Tsimiski 44</warehouseAddress>
+        <warehouseCity>Larisa</warehouseCity>
+        <inverseOfFeatures rdf:resource="&ang;eshop2"/>
+        <stores rdf:resource="&ang;product4"/>
+        <stores rdf:resource="&ang;product6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/personal/ontologies/2016/4/untitled-ontology-16#warehouse3 -->
+
+    <owl:NamedIndividual rdf:about="&ang;warehouse3">
+        <rdf:type rdf:resource="&ang;Warehouse"/>
+        <warehouseCity>Athens</warehouseCity>
+        <warehouseAddress>Perikleous 43</warehouseAddress>
+        <warehouseCountry>Greece</warehouseCountry>
+        <inverseOfFeatures rdf:resource="&ang;eshop2"/>
+        <stores rdf:resource="&ang;product2"/>
+        <stores rdf:resource="&ang;product5"/>
+        <stores rdf:resource="&ang;product7"/>
+        <stores rdf:resource="&ang;product8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ang;Marketing"/>
+            <rdf:Description rdf:about="&ang;Sales"/>
+            <rdf:Description rdf:about="&ang;Technical"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ang;Administrator"/>
+            <rdf:Description rdf:about="&ang;Advertiser"/>
+            <rdf:Description rdf:about="&ang;Developer"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
